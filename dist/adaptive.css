@@ -1,0 +1,515 @@
+@charset "UTF-8";
+@media screen and (max-width: 1156px) {
+  .technology .technology-item {
+    display: none;
+    position: static !important; /* Убираем абсолютное позиционирование */
+    text-align: start;
+    width: 290px;
+    background: #313139;
+    padding: 21px 16px;
+    margin-top: 15px;
+    justify-self: center;
+  }
+  .technology .technology-item .pointer-block,
+  .technology .technology-item .pointer-line {
+    display: none; /* Скрываем pointer-block и pointer-line */
+  }
+  .technology .technology-item .tech-item-title {
+    z-index: 1;
+    position: relative;
+  }
+  .technology .technology-item .tech-item-title .triangle {
+    position: absolute;
+    display: block;
+    z-index: 0;
+    top: -34px;
+    left: 43px;
+    width: 35px;
+  }
+  .technology .technology-item .pointer::before {
+    content: none; /* Убираем псевдоселектор */
+  }
+  .technology .technology-item.active {
+    display: block;
+  }
+  .technology .technology-item {
+    /* Анимационные стили переносим СЮДА, а не в отдельный блок */
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, max-height 0.6s ease, transform 0.4s ease;
+    /* Активное состояние */
+  }
+  .technology .technology-item .tech-item-title {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  .technology .technology-item .tech-item-text {
+    font-size: 14px;
+  }
+  .technology .technology-item.active {
+    max-height: none !important; /* Отключаем ограничение */
+    height: auto;
+  }
+  .technology .technology-item.active {
+    opacity: 1;
+    transform: translateY(0);
+    margin-bottom: 20px;
+  }
+  .technology .technology-item.active .triangle {
+    animation: bounceIn 0.6s ease;
+  }
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  .technology .tech-image .pointer-image-block {
+    display: block;
+    position: absolute;
+  }
+  .technology .tech-image .pointer-image-block:hover .pointer {
+    border: 1px solid #fcedcb;
+  }
+  .technology .tech-image .pointer-image-block:hover .pointer-in {
+    background-color: #fcedcb;
+  }
+  .technology .tech-image .pointer-image-block:nth-child(2) {
+    top: 28%;
+    left: 12%;
+  }
+  .technology .tech-image .pointer-image-block:nth-child(3) {
+    top: 62%;
+    left: 24%;
+  }
+  .technology .tech-image .pointer-image-block:nth-child(4) {
+    top: 89%;
+    left: 40%;
+  }
+  .technology .tech-image .pointer-image-block:nth-child(5) {
+    top: 29%;
+    left: 78%;
+  }
+  .technology .tech-image .pointer-image-block:nth-child(6) {
+    top: 57%;
+    right: 29%;
+  }
+}
+@media screen and (max-width: 1079px) {
+  .projects .project {
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .projects .project.more-project {
+    justify-content: center;
+  }
+  .projects .container-self .description {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+  }
+  .projects .container-self .project-des-title {
+    display: block;
+    width: 592px;
+    text-align: start;
+    margin-bottom: 25px;
+  }
+  .projects .container-self .des-title {
+    display: none;
+  }
+  .projects .container-self .give-form {
+    text-align: center;
+  }
+  .projects .container-self .give-pdf {
+    margin: 20px 0;
+    text-align: center;
+  }
+  .projects .project1 {
+    display: flex;
+    align-items: flex-start;
+  }
+  .projects .more-prj {
+    cursor: pointer;
+    font-size: 18px;
+    font-family: MuseoSansCyrlBig, sans-serif;
+    color: rgb(186, 186, 186);
+    margin-top: 63px;
+  }
+  .projects .more-prj svg {
+    margin-left: 10px;
+    width: 16px;
+  }
+  .projects .more-prj svg path {
+    fill: rgb(186, 186, 186);
+  }
+  .projects .close {
+    margin-top: 30px;
+    display: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: MuseoSansCyrlBig, sans-serif;
+    color: rgb(186, 186, 186);
+  }
+  .projects .close a {
+    text-decoration: none;
+    color: rgb(186, 186, 186);
+  }
+  .projects .close svg {
+    rotate: 180deg;
+    margin-left: 10px;
+    width: 16px;
+  }
+  .projects .close svg path {
+    fill: rgb(186, 186, 186);
+  }
+  .projects .more-project {
+    display: none;
+    justify-content: space-between;
+  }
+  .consultation img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .projects .container-self .prj-image {
+    max-width: 510px;
+  }
+  .projects .container-self .description {
+    width: 510px;
+  }
+  .projects .container-self .prj-extra-image {
+    max-width: 163px;
+  }
+  .projects .container-self .project-des-title {
+    width: 510px;
+  }
+  .projects .container-self .extra-prj1-images img {
+    margin-right: 10px;
+  }
+  .consultation .container-self .consultation-img {
+    display: none;
+  }
+  .excursion {
+    background-image: url("../images/mini-map.png");
+  }
+  .main .container-self .media, .main .container-self .more {
+    display: none;
+  }
+  .header {
+    padding: 30px 0;
+  }
+  .header .container-self .navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .header .container-self .navbar .logo {
+    position: absolute; /* Вырываем из flex-потока */
+    left: 50%; /* Центрируем */
+    top: 8%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+  .header .container-self .navbar .phone {
+    visibility: hidden;
+  }
+  .footer .container-self {
+    flex-direction: column;
+    text-align: center;
+    align-items: center; /* Центрирование по горизонтали */
+    justify-content: center; /* Центрирование по вертикали */
+  }
+  .footer .container-self .main {
+    order: 1;
+    margin-left: 30px;
+    width: 210px;
+  }
+  .footer .container-self .info {
+    order: 2;
+  }
+  .footer .container-self .phone {
+    order: 3;
+  }
+  .footer .container-self .yt {
+    margin: 0;
+  }
+  .slider .slider-item {
+    overflow: hidden;
+    width: 291px;
+    height: 391px;
+  }
+  .slider .slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .slider .slider-item-des {
+    padding: 15px;
+    margin-top: -100px;
+    justify-content: normal;
+  }
+  .slider .sid-main {
+    padding-right: 0;
+  }
+  .slider .sid-param {
+    padding-left: 23px;
+  }
+  .slider .sid-name {
+    font-size: 14px;
+    width: 123px;
+  }
+  .slider .sid-size {
+    font-size: 14px;
+    width: 90px;
+  }
+  .slider .sid-square {
+    font-size: 14px;
+  }
+  .slider .sid-address {
+    font-size: 14px;
+    width: 97px;
+  }
+  .slider span {
+    display: none;
+  }
+}
+@media screen and (max-width: 523px) {
+  .projects {
+    padding: 0;
+  }
+  .projects .container-self .prj-image {
+    max-width: 340px;
+  }
+  .projects .container-self .description {
+    width: 340px;
+  }
+  .projects .container-self .prj-extra-image {
+    max-width: 107px;
+  }
+  .projects .container-self .project-des-title {
+    width: 340px;
+  }
+  .projects .container-self .extra-prj1-images img {
+    margin-right: 10px;
+  }
+  .projects .container-self .btn-custom {
+    padding: 18px 50px 17px 50px;
+  }
+  .projects .container-self .pdf {
+    padding: 18px 8px;
+  }
+}
+@media screen and (max-width: 456px) {
+  main .container-self .main-text {
+    font-size: 14px;
+    font-family: MuseoSansCyrlBigBold, sans-serif;
+    width: 290px;
+    justify-self: center;
+    margin-bottom: 30px;
+  }
+  .projects .container-self .project-des-title {
+    font-size: 18px;
+  }
+  .projects .container-self .projects-title {
+    text-align: start;
+    margin-left: 13px;
+    margin-bottom: 0;
+  }
+  .projects .container-self .project1 {
+    margin-top: 50px;
+  }
+  .projects .container-self .par-item {
+    width: 85px;
+    height: 85px;
+    font-size: 15px;
+  }
+  .projects .container-self .prj-action {
+    margin-top: 40px;
+  }
+  .consultation .container-self form {
+    width: 290px;
+  }
+  .consultation .container-self .form-button {
+    width: 290px;
+    padding: 18px 0;
+  }
+  .projects {
+    padding: 0;
+  }
+  .projects .container-self .project {
+    margin-top: 45px;
+  }
+  .projects .container-self .project2 .prj-action {
+    margin-top: 40px;
+  }
+  .projects .container-self .project1 {
+    margin-top: 50px;
+  }
+  .projects .container-self .des-text {
+    font-size: 14px;
+  }
+  .projects .container-self .prj-image {
+    max-width: 290px;
+  }
+  .projects .container-self .more-prj {
+    font-size: 15px;
+    margin-top: 50px;
+  }
+  .projects .container-self .description {
+    width: 290px;
+  }
+  .projects .container-self .prj-extra-image {
+    max-width: 90px;
+  }
+  .projects .container-self .project-des-title {
+    width: 290px;
+  }
+  .projects .container-self .extra-prj1-images img {
+    margin-right: 10px;
+  }
+  .projects .container-self .btn-custom {
+    padding: 18px 50px;
+    font-size: 16px;
+  }
+  .projects .container-self .pdf {
+    font-size: 16px;
+    padding: 18px 9px;
+  }
+  main .container-self .main-title {
+    width: 300px;
+  }
+  main {
+    padding: 100px 0;
+  }
+  .technology {
+    padding-top: 40px;
+    padding-bottom: 83px;
+    /* Переносим общие стили для technology-item на верхний уровень вложенности */
+  }
+  .technology .tech-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .steps {
+    padding-left: 21px;
+    padding-bottom: 20px;
+  }
+  .steps .steps-title {
+    font-size: 30px;
+    margin-bottom: 55px;
+  }
+  .steps .step .step-des {
+    width: 212px;
+  }
+  .steps .step .step-content .step-title {
+    font-size: 16px;
+  }
+  .steps .step .step-content .step-text {
+    width: 212px;
+    font-size: 16px;
+  }
+  .slider .slider-title {
+    font-size: 30px;
+    width: 300px;
+    margin: 20px auto;
+  }
+  .slider .prev, .slider .next {
+    display: none;
+  }
+  .slider .slick-dots {
+    margin-top: -120px;
+  }
+  .guarantees {
+    text-align: center;
+    padding: 0;
+  }
+  .guarantees .guarantees-icon {
+    margin-right: 20px;
+  }
+  .guarantees .guarantees-title {
+    margin-bottom: 20px;
+    font-size: 30px;
+    width: 250px;
+    justify-self: center;
+  }
+  .guarantees .guarantees-block {
+    width: 290px;
+    text-align: start;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .guarantees .guarantees-p .guarant-title {
+    font-size: 16px;
+  }
+  .guarantees .guarantees-p .guarantees-text {
+    font-size: 14px;
+  }
+  .guarantees .pdf {
+    margin-top: 20px;
+    padding: 18px 10px;
+    font-size: 14px;
+  }
+  .guarantees .advantages .advantage .adv-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 30px;
+  }
+  .guarantees .advantages .advantage .adv-icon img {
+    width: 50px;
+  }
+  .guarantees .advantages .advantage .adv-title {
+    width: 290px;
+    font-size: 16px;
+  }
+  .guarantees .advantages .advantage .adv-text {
+    font-size: 16px;
+  }
+  .guarantees .advantages .advantage:nth-child(1) {
+    order: 2;
+  }
+  .guarantees .advantages .advantage:nth-child(2) {
+    order: 1;
+  }
+  .guarantees .advantages .advantage:nth-child(3) {
+    order: 3;
+  }
+  .consultation {
+    padding-top: 30px;
+  }
+  .consultation .container-self .cf-title {
+    font-size: 30px;
+  }
+  .consultation .container-self .form-control {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .excursion {
+    padding: 90px 0;
+  }
+  .excursion .container-self .exc-main {
+    margin-top: 0;
+  }
+  .excursion .container-self .exc-title {
+    font-size: 30px;
+    width: 200px;
+    justify-self: center;
+  }
+  .excursion .container-self .exc-text {
+    font-size: 16px;
+    width: 290px;
+  }
+  .excursion .container-self .btn-custom {
+    padding: 19px 100px;
+  }
+  .footer {
+    padding-bottom: 20px;
+  }
+}

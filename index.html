@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>House building</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
+    <link rel="stylesheet" href="dist/style.css">
+</head>
+<body>
+
+<section class="building-main">
+    <header class="header py-2">
+        <div class="container-self">
+            <nav class="navbar">
+                <div class="menu">
+                    <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+                    <label for="burger-checkbox" class="burger"></label>
+                    <div class="menu-block">
+                        <div class="menu-logo">Меню</div>
+                        <ul class="menu-list">
+                            <li class="item">
+                                <div class="circle"></div>
+                                <a href="#" class="menu-item">Каталог</a>
+                            </li>
+                            <li class="item">
+                                <div class="circle"></div>
+                                <a href="#" class="menu-item">Технологии</a>
+                            </li>
+                            <li class="item">
+                                <div class="circle"></div>
+                                <a href="#" class="menu-item">Наши проекты</a>
+                            </li>
+                            <li class="item">
+                                <div class="circle"></div>
+                                <a href="#" class="menu-item">Производство</a>
+                            </li>
+                            <li class="item">
+                                <div class="circle"></div>
+                                <a href="#" class="menu-item">Гарантия</a>
+                            </li>
+                            <li class="item">
+                                <div class="circle"></div>
+                                <a href="#" class="menu-item">Отзывы</a>
+                            </li>
+                        </ul>
+                        <div class="media">
+                            <svg class="media-icon" viewBox="0 0 30 30" role="img"
+                                 xmlns="http://www.w3.org/2000/svg"><title>Instagram
+                                icon</title>
+                                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                            </svg>
+                            <svg class="media-icon" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M5.78754 14.0196C5.83131 14.0344 5.87549 14.0448 5.91963 14.0512C5.96777 14.1644 6.02996 14.3107 6.10252 14.4818C6.27959 14.8994 6.51818 15.4643 6.76446 16.0535C7.2667 17.2552 7.77332 18.4939 7.88521 18.8485C8.02372 19.2868 8.17013 19.5848 8.32996 19.7883C8.4126 19.8935 8.50819 19.9853 8.62003 20.0549C8.67633 20.0899 8.7358 20.1186 8.79788 20.14C8.80062 20.141 8.80335 20.1419 8.80608 20.1428C9.1261 20.2636 9.41786 20.2133 9.60053 20.1518C9.69827 20.1188 9.77735 20.0791 9.8334 20.0469C9.86198 20.0304 9.88612 20.0151 9.90538 20.0021L9.90992 19.9991L12.7361 18.2366L16.0007 20.7394C16.0488 20.7763 16.1014 20.8073 16.157 20.8316C16.5492 21.0027 16.929 21.0624 17.2862 21.0136C17.6429 20.9649 17.926 20.8151 18.1368 20.6464C18.3432 20.4813 18.4832 20.2963 18.5703 20.1589C18.6148 20.0887 18.6482 20.0266 18.6718 19.9791C18.6836 19.9552 18.6931 19.9346 18.7005 19.9181L18.7099 19.8963L18.7135 19.8877L18.715 19.8841L18.7156 19.8824L18.7163 19.8808C18.7334 19.8379 18.7466 19.7935 18.7556 19.7482L21.7358 4.72274C21.7453 4.67469 21.7501 4.62581 21.7501 4.57682C21.7501 4.13681 21.5843 3.71841 21.1945 3.46452C20.8613 3.24752 20.4901 3.23818 20.2556 3.25598C20.0025 3.27519 19.7688 3.33766 19.612 3.38757C19.5304 3.41355 19.4619 3.43861 19.4126 3.45773C19.3878 3.46734 19.3675 3.47559 19.3523 3.48188L19.341 3.48666L2.62725 10.0432L2.62509 10.044C2.61444 10.0479 2.60076 10.053 2.58451 10.0593C2.55215 10.0719 2.50878 10.0896 2.45813 10.1126C2.35935 10.1574 2.22077 10.2273 2.07856 10.3247C1.85137 10.4803 1.32888 10.9064 1.41686 11.6097C1.48705 12.1708 1.87143 12.5154 2.10562 12.6811C2.23421 12.7721 2.35638 12.8371 2.44535 12.8795C2.48662 12.8991 2.57232 12.9339 2.6095 12.9491L2.61889 12.9529L5.78754 14.0196ZM19.9259 4.86786L19.9236 4.86888C19.9152 4.8725 19.9069 4.87596 19.8984 4.87928L3.1644 11.4438C3.15566 11.4472 3.14686 11.4505 3.138 11.4536L3.12869 11.4571C3.11798 11.4613 3.09996 11.4686 3.07734 11.4788C3.06451 11.4846 3.05112 11.491 3.03747 11.4978C3.05622 11.5084 3.07417 11.5175 3.09012 11.5251C3.10543 11.5324 3.11711 11.5374 3.1235 11.54L6.26613 12.598C6.32365 12.6174 6.37727 12.643 6.42649 12.674L16.8033 6.59948L16.813 6.59374C16.8205 6.58927 16.8305 6.58353 16.8424 6.5768C16.866 6.56345 16.8984 6.54568 16.937 6.52603C17.009 6.48938 17.1243 6.43497 17.2541 6.39485C17.3444 6.36692 17.6109 6.28823 17.899 6.38064C18.0768 6.43767 18.2609 6.56028 18.3807 6.76798C18.4401 6.87117 18.4718 6.97483 18.4872 7.06972C18.528 7.2192 18.5215 7.36681 18.4896 7.49424C18.4208 7.76875 18.228 7.98287 18.0525 8.14665C17.9021 8.28706 15.9567 10.1629 14.0376 12.0147C13.0805 12.9381 12.1333 13.8525 11.4252 14.5359L10.9602 14.9849L16.8321 19.4867C16.9668 19.5349 17.0464 19.5325 17.0832 19.5274C17.1271 19.5214 17.163 19.5045 17.1997 19.4752C17.2407 19.4424 17.2766 19.398 17.3034 19.3557L17.3045 19.354L20.195 4.78102C20.1521 4.79133 20.1087 4.80361 20.0669 4.81691C20.0196 4.83198 19.9805 4.84634 19.9547 4.85637C19.9418 4.86134 19.9326 4.86511 19.9276 4.86719L19.9259 4.86786ZM11.4646 17.2618L10.2931 16.3636L10.0093 18.1693L11.4646 17.2618ZM9.21846 14.5814L10.3834 13.4567C11.0915 12.7732 12.0389 11.8588 12.9961 10.9352L13.9686 9.997L7.44853 13.8138L7.48351 13.8963C7.66121 14.3154 7.90087 14.8827 8.14845 15.4751C8.33358 15.918 8.52717 16.3844 8.70349 16.8162L8.98653 15.0158C9.01381 14.8422 9.09861 14.692 9.21846 14.5814Z"
+                                />
+                            </svg>
+                            <svg class="media-icon yt"
+                                 xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 30 30"
+                                 height="40px"
+                                 width="40px"
+                                 fill="transparent"
+                                 stroke="#ffffff"
+                                 stroke-width="2"
+                                 stroke-linecap="round"
+                                 stroke-linejoin="round"
+                            >
+                                <path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"/>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <img class="logo" src="/images/House%20Care.png" alt="Logo">
+                <div class="phone">
+                    <div class="phone-number mb-2">
+                        +380 (96) 73-67-281
+                    </div>
+                    <a href="#consultation" class="phone-block">
+                        <img src="images/phone-call.png" alt="phoneCall">
+                        <div class="phone-text d-inline-block">
+                            Заказать звонок
+                        </div>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main text-center">
+        <div class="container-self">
+            <div class="main-title h1 wow animate__zoomIn">
+                Строительство домов
+                и коттеджей под ключ
+            </div>
+            <div class="main-text wow animate__bounceIn">
+                Сможете переехать в готовый дом уже через 3 месяца
+            </div>
+            <a href="#consultation">
+                <button class="btn-custom">Узнать подробнее</button>
+            </a>
+            <div class="media">
+                <svg class="media-icon" viewBox="0 0 30 30" role="img"
+                     xmlns="http://www.w3.org/2000/svg"><title>Instagram
+                    icon</title>
+                    <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                </svg>
+                <svg class="media-icon" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M5.78754 14.0196C5.83131 14.0344 5.87549 14.0448 5.91963 14.0512C5.96777 14.1644 6.02996 14.3107 6.10252 14.4818C6.27959 14.8994 6.51818 15.4643 6.76446 16.0535C7.2667 17.2552 7.77332 18.4939 7.88521 18.8485C8.02372 19.2868 8.17013 19.5848 8.32996 19.7883C8.4126 19.8935 8.50819 19.9853 8.62003 20.0549C8.67633 20.0899 8.7358 20.1186 8.79788 20.14C8.80062 20.141 8.80335 20.1419 8.80608 20.1428C9.1261 20.2636 9.41786 20.2133 9.60053 20.1518C9.69827 20.1188 9.77735 20.0791 9.8334 20.0469C9.86198 20.0304 9.88612 20.0151 9.90538 20.0021L9.90992 19.9991L12.7361 18.2366L16.0007 20.7394C16.0488 20.7763 16.1014 20.8073 16.157 20.8316C16.5492 21.0027 16.929 21.0624 17.2862 21.0136C17.6429 20.9649 17.926 20.8151 18.1368 20.6464C18.3432 20.4813 18.4832 20.2963 18.5703 20.1589C18.6148 20.0887 18.6482 20.0266 18.6718 19.9791C18.6836 19.9552 18.6931 19.9346 18.7005 19.9181L18.7099 19.8963L18.7135 19.8877L18.715 19.8841L18.7156 19.8824L18.7163 19.8808C18.7334 19.8379 18.7466 19.7935 18.7556 19.7482L21.7358 4.72274C21.7453 4.67469 21.7501 4.62581 21.7501 4.57682C21.7501 4.13681 21.5843 3.71841 21.1945 3.46452C20.8613 3.24752 20.4901 3.23818 20.2556 3.25598C20.0025 3.27519 19.7688 3.33766 19.612 3.38757C19.5304 3.41355 19.4619 3.43861 19.4126 3.45773C19.3878 3.46734 19.3675 3.47559 19.3523 3.48188L19.341 3.48666L2.62725 10.0432L2.62509 10.044C2.61444 10.0479 2.60076 10.053 2.58451 10.0593C2.55215 10.0719 2.50878 10.0896 2.45813 10.1126C2.35935 10.1574 2.22077 10.2273 2.07856 10.3247C1.85137 10.4803 1.32888 10.9064 1.41686 11.6097C1.48705 12.1708 1.87143 12.5154 2.10562 12.6811C2.23421 12.7721 2.35638 12.8371 2.44535 12.8795C2.48662 12.8991 2.57232 12.9339 2.6095 12.9491L2.61889 12.9529L5.78754 14.0196ZM19.9259 4.86786L19.9236 4.86888C19.9152 4.8725 19.9069 4.87596 19.8984 4.87928L3.1644 11.4438C3.15566 11.4472 3.14686 11.4505 3.138 11.4536L3.12869 11.4571C3.11798 11.4613 3.09996 11.4686 3.07734 11.4788C3.06451 11.4846 3.05112 11.491 3.03747 11.4978C3.05622 11.5084 3.07417 11.5175 3.09012 11.5251C3.10543 11.5324 3.11711 11.5374 3.1235 11.54L6.26613 12.598C6.32365 12.6174 6.37727 12.643 6.42649 12.674L16.8033 6.59948L16.813 6.59374C16.8205 6.58927 16.8305 6.58353 16.8424 6.5768C16.866 6.56345 16.8984 6.54568 16.937 6.52603C17.009 6.48938 17.1243 6.43497 17.2541 6.39485C17.3444 6.36692 17.6109 6.28823 17.899 6.38064C18.0768 6.43767 18.2609 6.56028 18.3807 6.76798C18.4401 6.87117 18.4718 6.97483 18.4872 7.06972C18.528 7.2192 18.5215 7.36681 18.4896 7.49424C18.4208 7.76875 18.228 7.98287 18.0525 8.14665C17.9021 8.28706 15.9567 10.1629 14.0376 12.0147C13.0805 12.9381 12.1333 13.8525 11.4252 14.5359L10.9602 14.9849L16.8321 19.4867C16.9668 19.5349 17.0464 19.5325 17.0832 19.5274C17.1271 19.5214 17.163 19.5045 17.1997 19.4752C17.2407 19.4424 17.2766 19.398 17.3034 19.3557L17.3045 19.354L20.195 4.78102C20.1521 4.79133 20.1087 4.80361 20.0669 4.81691C20.0196 4.83198 19.9805 4.84634 19.9547 4.85637C19.9418 4.86134 19.9326 4.86511 19.9276 4.86719L19.9259 4.86786ZM11.4646 17.2618L10.2931 16.3636L10.0093 18.1693L11.4646 17.2618ZM9.21846 14.5814L10.3834 13.4567C11.0915 12.7732 12.0389 11.8588 12.9961 10.9352L13.9686 9.997L7.44853 13.8138L7.48351 13.8963C7.66121 14.3154 7.90087 14.8827 8.14845 15.4751C8.33358 15.918 8.52717 16.3844 8.70349 16.8162L8.98653 15.0158C9.01381 14.8422 9.09861 14.692 9.21846 14.5814Z"
+                    />
+                </svg>
+                <svg class="media-icon yt"
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 30 30"
+                     height="40px"
+                     width="40px"
+                     fill="transparent"
+                     stroke="#ffffff"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                >
+                    <path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"/>
+                    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+                </svg>
+            </div>
+            <div class="more">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                     width="30" height="30" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M5 12h20M5 12l4-4m-4 4 4 4"/>
+                </svg>
+                <div class="more-text d-inline-block">
+                    <a href="#projects">
+                        Листайте вниз
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+</section>
+
+<section class="projects">
+    <div class="container-self">
+        <div class="projects-title h2" id="projects">
+            Наши проекты
+        </div>
+        <div class="project project1">
+            <div class="project-des-title">
+                Modern house 003
+            </div>
+            <div class="prj1-images">
+                <a href="images/project1.png" data-mfp-src="images/project1.png" class="image-link wow animate__delay-1s animate__bounce">
+                    <img class="prj-image d-flex" src="images/project1.png" alt="">
+                </a>
+                <div class="extra-prj1-images d-flex">
+                    <a href="images/mini-pr1.png" data-mfp-src="images/mini-pr1.png" class="image-link wow animate__fadeInTopLeft">
+                        <img class="prj-extra-image" src="images/mini-pr1.png" alt="">
+                    </a>
+                    <a href="images/mini2-pr1.png" data-mfp-src="images/mini2-pr1.png" class="image-link wow animate__fadeInTopLeft">
+                        <img class="prj-extra-image" src="images/mini2-pr1.png" alt="">
+                    </a>
+                    <a href="images/mini3-pr1.png" data-mfp-src="images/mini3-pr1.png" class="image-link wow animate__fadeInTopLeft">
+                        <img class="prj-extra-image last-img" src="images/mini3-pr1.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="description">
+                <div class="des-title">
+                    Modern house 003
+                </div>
+                <div class="des-text">
+                    Этот проект представляет собой красивый и удобный одноэтажный дом с многоскатной кровлей,
+                    эркером и камином на террасе. Его внешний традиционный архитектурный стиль прекрасно
+                    сочетается с современной практичной планировкой интерьера.
+                </div>
+                <div class="parameters d-flex justify-content-between">
+                    <div class="par-item">
+                        134 м<sup>2</sup>
+                    </div>
+                    <div class="par-item">
+                        4 <br> спальни
+                    </div>
+                    <div class="par-item">
+                        2 <br> санузла
+                    </div>
+                </div>
+                <div class="prj-action">
+                    <div class="give-form">
+                        <a href="#consultation">
+                            <button class="btn-custom">Получить консультацию</button>
+                        </a>
+                    </div>
+                    <div class="give-pdf">
+                        <a href="files/plan-pjt.pdf" download="Plan">
+                            <button class="pdf">Скачать PDF-план проекта (2,5 мб)</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project project2" id="project2">
+            <div class="project-des-title">
+                Modern house 004
+            </div>
+            <div class="description d-inline-block">
+                <div class="des-title">
+                    Modern house 004
+                </div>
+                <div class="des-text">
+                    Компактный и функциональный дом подкупает простотой решений. Простая форма и двухскатная кровля
+                    позволяет вести строительство быстро и достаточно экономично. Комнаты сделаны максимально
+                    просторными за счет маленьких технических и коммуникационных помещений.
+                </div>
+                <div class="parameters d-flex justify-content-between">
+                    <div class="par-item">
+                        145 м<sup>2</sup>
+                    </div>
+                    <div class="par-item">
+                        3 <br> спальни
+                    </div>
+                    <div class="par-item">
+                        2 <br> санузла
+                    </div>
+                </div>
+                <div class="prj-action">
+                    <div class="give-form">
+                        <a href="#consultation">
+                            <button class="btn-custom">Получить консультацию</button>
+                        </a>
+                    </div>
+                    <div class="give-pdf">
+                        <a href="files/plan-pjt.pdf" download="Plan">
+                            <button class="pdf">Скачать PDF-план проекта (2,5 мб)</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="prj1-images d-inline-block">
+                <!-- Главное изображение -->
+                <a href="images/project2.png" data-mfp-src="images/project2.png" class="image-link">
+                    <img class="prj-image d-flex" src="images/project2.png" alt="">
+                </a>
+                <!-- Миниатюры -->
+                <div class="extra-prj1-images d-flex">
+                    <a href="images/mini-pr1.png" data-mfp-src="images/mini-pr1.png" class="image-link animate__fadeInTopLeft">
+                        <img class="prj-extra-image" src="images/mini-pr1.png" alt="">
+                    </a>
+                    <a href="images/mini2-pr1.png" data-mfp-src="images/mini2-pr1.png" class="image-link animate__fadeInTopLeft">
+                        <img class="prj-extra-image" src="images/mini2-pr1.png" alt="">
+                    </a>
+                    <a href="images/mini3-pr1.png" data-mfp-src="images/mini3-pr1.png" class="image-link animate__fadeInTopLeft">
+                        <img class="prj-extra-image last-img" src="images/mini3-pr1.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="project more-project">
+            <div class="project-des-title">
+                Modern house 012
+            </div>
+            <div class="prj1-images d-inline-block">
+                <a href="images/project1.png" data-mfp-src="images/project1.png" class="image-link">
+                    <img class="prj-image d-flex" src="images/project1.png" alt="">
+                </a>
+                <div class="extra-prj1-images d-flex">
+                    <a href="images/mini-pr1.png" data-mfp-src="images/mini-pr1.png" class="image-link">
+                        <img class="prj-extra-image" src="images/mini-pr1.png" alt="">
+                    </a>
+                    <a href="images/mini2-pr1.png" data-mfp-src="images/mini2-pr1.png" class="image-link">
+                        <img class="prj-extra-image" src="images/mini2-pr1.png" alt="">
+                    </a>
+                    <a href="images/mini3-pr1.png" data-mfp-src="images/mini3-pr1.png" class="image-link">
+                        <img class="prj-extra-image last-img" src="images/mini3-pr1.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="description d-inline-block">
+                <div class="des-title">
+                    Modern house 012
+                </div>
+                <div class="des-text">
+                    Этот проект представляет собой красивый и удобный одноэтажный дом с многоскатной кровлей,
+                    эркером. Просторные окна позволяют вам дольше находиться под естественным освещением.
+                </div>
+                <div class="parameters d-flex justify-content-between">
+                    <div class="par-item">
+                        120 м<sup>2</sup>
+                    </div>
+                    <div class="par-item">
+                        2 <br> спальни
+                    </div>
+                    <div class="par-item">
+                        2 <br> санузла
+                    </div>
+                </div>
+                <div class="prj-action">
+                    <div class="give-form">
+                        <a href="#consultation">
+                            <button class="btn-custom">Получить консультацию</button>
+                        </a>
+                    </div>
+                    <div class="give-pdf">
+                        <a href="files/plan-pjt.pdf" download="Plan">
+                            <button class="pdf">Скачать PDF-план проекта (2,5 мб)</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project more-project">
+            <div class="project-des-title">
+                Modern house 013
+            </div>
+            <div class="description d-inline-block">
+                <div class="des-title">
+                    Modern house 013
+                </div>
+                <div class="des-text">
+                    Быстрое и экономичное решение для вашей семьи. Комнаты сделаны максимально
+                    просторными за счет маленьких технических и коммуникационных помещений.
+                </div>
+                <div class="parameters d-flex justify-content-between">
+                    <div class="par-item">
+                        110 м<sup>2</sup>
+                    </div>
+                    <div class="par-item">
+                        3 <br> спальни
+                    </div>
+                    <div class="par-item">
+                        2 <br> санузла
+                    </div>
+                </div>
+                <div class="prj-action">
+                    <div class="give-form">
+                        <a href="#consultation">
+                            <button class="btn-custom">Получить консультацию</button>
+                        </a>
+                    </div>
+                    <div class="give-pdf">
+                        <a href="files/plan-pjt.pdf" download="Plan">
+                            <button class="pdf">Скачать PDF-план проекта (2,5 мб)</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="prj2-images d-inline-block">
+                <!-- Главное изображение -->
+                <a href="images/project2.png" data-mfp-src="images/project2.png" class="image-link">
+                    <img class="prj-image d-flex" src="images/project2.png" alt="">
+                </a>
+                <!-- Миниатюры -->
+                <div class="extra-prj1-images d-flex">
+                    <a href="images/mini-pr1.png" data-mfp-src="images/mini-pr1.png" class="image-link">
+                        <img class="prj-extra-image" src="images/mini-pr1.png" alt="">
+                    </a>
+                    <a href="images/mini2-pr1.png" data-mfp-src="images/mini2-pr1.png" class="image-link">
+                        <img class="prj-extra-image" src="images/mini2-pr1.png" alt="">
+                    </a>
+                    <a href="images/mini3-pr1.png" data-mfp-src="images/mini3-pr1.png" class="image-link">
+                        <img class="prj-extra-image last-img" src="images/mini3-pr1.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project more-project">
+            <div class="project-des-title">
+                Modern house 012
+            </div>
+            <div class="prj1-images d-inline-block">
+                <a href="images/project1.png" data-mfp-src="images/project1.png" class="image-link">
+                    <img class="prj-image d-flex" src="images/project1.png" alt="">
+                </a>
+                <div class="extra-prj1-images d-flex">
+                    <a href="images/mini-pr1.png" data-mfp-src="images/mini-pr1.png" class="image-link">
+                        <img class="prj-extra-image" src="images/mini-pr1.png" alt="">
+                    </a>
+                    <a href="images/mini2-pr1.png" data-mfp-src="images/mini2-pr1.png" class="image-link">
+                        <img class="prj-extra-image" src="images/mini2-pr1.png" alt="">
+                    </a>
+                    <a href="images/mini3-pr1.png" data-mfp-src="images/mini3-pr1.png" class="image-link">
+                        <img class="prj-extra-image last-img" src="images/mini3-pr1.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="description d-inline-block">
+                <div class="des-title">
+                    Modern house 012
+                </div>
+                <div class="des-text">
+                    Этот проект представляет собой красивый и удобный одноэтажный дом с многоскатной кровлей,
+                    эркером. Просторные окна позволяют вам дольше находиться под естественным освещением.
+                </div>
+                <div class="parameters d-flex justify-content-between">
+                    <div class="par-item">
+                        120 м<sup>2</sup>
+                    </div>
+                    <div class="par-item">
+                        2 <br> спальни
+                    </div>
+                    <div class="par-item">
+                        2 <br> санузла
+                    </div>
+                </div>
+                <div class="prj-action">
+                    <div class="give-form">
+                        <a href="#consultation">
+                            <button class="btn-custom">Получить консультацию</button>
+                        </a>
+                    </div>
+                    <div class="give-pdf">
+                        <a href="files/plan-pjt.pdf" download="Plan">
+                            <button class="pdf">Скачать PDF-план проекта (2,5 мб)</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="more-prj text-center">
+            Посмотреть ещё 3 проекта
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                 viewBox="0 0 256 256" xml:space="preserve">
+<g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+   transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+	<path d="M 90 24.25 c 0 -0.896 -0.342 -1.792 -1.025 -2.475 c -1.366 -1.367 -3.583 -1.367 -4.949 0 L 45 60.8 L 5.975 21.775 c -1.367 -1.367 -3.583 -1.367 -4.95 0 c -1.366 1.367 -1.366 3.583 0 4.95 l 41.5 41.5 c 1.366 1.367 3.583 1.367 4.949 0 l 41.5 -41.5 C 89.658 26.042 90 25.146 90 24.25 z"
+          style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill-rule: nonzero; opacity: 1;"
+          transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+</g>
+</svg>
+        </div>
+
+        <div class="close text-center">
+            <a href="#project2">
+                Свернуть
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                     viewBox="0 0 256 256" xml:space="preserve">
+<g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+   transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+	<path d="M 90 24.25 c 0 -0.896 -0.342 -1.792 -1.025 -2.475 c -1.366 -1.367 -3.583 -1.367 -4.949 0 L 45 60.8 L 5.975 21.775 c -1.367 -1.367 -3.583 -1.367 -4.95 0 c -1.366 1.367 -1.366 3.583 0 4.95 l 41.5 41.5 c 1.366 1.367 3.583 1.367 4.949 0 l 41.5 -41.5 C 89.658 26.042 90 25.146 90 24.25 z"
+          style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill-rule: nonzero; opacity: 1;"
+          transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+</g>
+</svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="technology">
+    <div class="container-self">
+        <div class="tech-title text-center">
+            Технологии строительства
+        </div>
+        <div class="tech-des">
+            <div class="tech-image text-center">
+                <img class="wow animate__shakeX" src="images/house-technology.png" alt="House image tech">
+                <div class="pointer-image-block" data-target="item1">
+                    <div class="pointer">
+                        <div class="pointer-in">
+                        </div>
+                    </div>
+                </div>
+                <div class="pointer-image-block" data-target="item2">
+                    <div class="pointer">
+                        <div class="pointer-in">
+                        </div>
+                    </div>
+                </div>
+                <div class="pointer-image-block" data-target="item3">
+                    <div class="pointer">
+                        <div class="pointer-in">
+                        </div>
+                    </div>
+                </div>
+                <div class="pointer-image-block" data-target="item4">
+                    <div class="pointer">
+                        <div class="pointer-in">
+                        </div>
+                    </div>
+                </div>
+                <div class="pointer-image-block" data-target="item5">
+                    <div class="pointer">
+                        <div class="pointer-in">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="technology-item active" id="item1">
+                <div class="tech-item-title">
+                    <img class="triangle" src="images/tech-triangle.png" alt="">
+                    Неразрывний каркас
+                </div>
+                <div class="tech-item-text">
+                    Монтаж стен этажей внутри дома и по всему периметру выполняется единым массивом.
+                </div>
+                <div class="pointer-block">
+                    <div class="pointer-line">
+                    </div>
+                    <div class="pointer">
+                        <div class="pointer-in">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="technology-item" id="item2">
+                <div class="tech-item-title">
+                    <img class="triangle" src="images/tech-triangle.png" alt="">
+                    Диагональный раскос
+                </div>
+                <div class="tech-item-text">
+                    Система диагональных раскосов позволяет создать оптимальный вентиляционный зазор для капитальных
+                    стен и наружной отделки
+                </div>
+                <div class="pointer-block">
+                    <div class="pointer-line">
+                    </div>
+                    <div class="pointer">
+                        <div class="pointer-in">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="technology-item" id="item3">
+                <div class="pointer-block">
+                    <div class="pointer-line">
+                    </div>
+                    <div class="pointer">
+                        <div class="pointer-in">
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-item-title">
+                    <img class="triangle" src="images/tech-triangle.png" alt="">
+                    Сборка силовых узлов
+                </div>
+                <div class="tech-item-text">
+                    Основные силовые узлы наших домов оцинкованы, что позволяет быть уверенными в исключительной
+                    прочности и долговечности конструкции
+                </div>
+            </div>
+            <div class="technology-item" id="item4">
+                <div class="pointer-block">
+                    <div class="pointer-line">
+                    </div>
+                    <div class="pointer">
+                        <div class="pointer-in">
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-item-title">
+                    <img class="triangle" src="images/tech-triangle.png" alt="">
+                    Плитная ветрозащита
+                </div>
+                <div class="tech-item-text">
+                    Используемая влагостойкая ветрозащитная плита обеспечивает дополнительную шумоизоляцию стен
+                </div>
+            </div>
+            <div class="technology-item" id="item5">
+                <div class="pointer-block">
+                    <div class="pointer-line">
+                    </div>
+                    <div class="pointer">
+                        <div class="pointer-in">
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-item-title">
+                    <img class="triangle" src="images/tech-triangle.png" alt="">
+                    5 камерные окна
+                </div>
+                <div class="tech-item-text">
+                    Обеспечивает исключительную сохранность тепла в доме
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="steps">
+    <div class="container-self">
+        <div class="steps-title text-center">
+            6 шагов к вашему новому дому
+        </div>
+        <div class="steps-des">
+            <div class="step">
+                <div class="bg-number">
+                    01
+                </div>
+                <div class="step-content">
+                    <div class="step-icon d-inline-block">
+                        <img src="images/chat-icon.png" alt="Chat">
+                    </div>
+                    <div class="step-des d-inline-block">
+                        <div class="step-title">
+                            Заявка на сайте
+                        </div>
+                        <div class="step-text">
+                            Вы <a href="#">оставляете заявку</a> на сайте, или звоните нам +380 (96) 73-67-281
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="bg-number">
+                    02
+                </div>
+                <div class="step-content ">
+                    <div class="step-icon d-inline-block">
+                        <img src="images/phone-icon.png" alt="Chat">
+                    </div>
+                    <div class="step-des d-inline-block">
+                        <div class="step-title">
+                            Звонок менеджера
+                        </div>
+                        <div class="step-text">
+                            Мы связываемся с вами для уточнения деталей и выбираем время для встречи
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="bg-number">
+                    03
+                </div>
+                <div class="step-content">
+                    <div class="step-icon d-inline-block">
+                        <img src="images/conference-icon.png" alt="Chat">
+                    </div>
+                    <div class="step-des d-inline-block">
+                        <div class="step-title">
+                            Встреча
+                        </div>
+                        <div class="step-text">
+                            Встречаемся на вашем участке и делаем все необходимые замеры
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="bg-number">
+                    04
+                </div>
+                <div class="step-content">
+                    <div class="step-icon d-inline-block">
+                        <img src="images/contract-icon.png" alt="Chat">
+                    </div>
+                    <div class="step-des d-inline-block">
+                        <div class="step-title">
+                            Договор
+                        </div>
+                        <div class="step-text">
+                            Заключаем договор с четко указанными сроками
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="bg-number">
+                    05
+                </div>
+                <div class="step-content">
+                    <div class="step-icon d-inline-block">
+                        <img src="images/technics-icon.png" alt="Chat">
+                    </div>
+                    <div class="step-des d-inline-block">
+                        <div class="step-title">
+                            Строительство
+                        </div>
+                        <div class="step-text">
+                            Наша бригада приступает к выполнению работ
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="bg-number">
+                    06
+                </div>
+                <div class="step-content">
+                    <div class="step-icon d-inline-block">
+                        <img src="images/house-icon.png" alt="Chat">
+                    </div>
+                    <div class="step-des d-inline-block">
+                        <div class="step-title">
+                            Ваш дом
+                        </div>
+                        <div class="step-text">
+                            Вы заежаете в свой новый дом!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="slider">
+    <div class="container-self">
+        <div class="slider-title text-center">
+            Построили более 200 домов за 10 лет
+        </div>
+        <button id="prevSlide" class="slider-arrow prev">&#10094;</button>
+        <div class="slider-items">
+            <div class="slider-item">
+                <img src="images/slider-photo4.png" alt="Modern house 001">
+                <div class="slider-item-des">
+                    <div class="sid-main">
+                        <div class="sid-name">
+                            Modern house 007
+                        </div>
+                        <div class="sid-address">
+                            Киевская обл., г. Борова, 18
+                        </div>
+                    </div>
+                    <div class="sid-param">
+                        <div class="sid-size">
+                            <span>Габариты:</span> 10,4 м Х 10,5 м
+                        </div>
+                        <div class="sid-square">
+                            <span>Площадь:</span> 166 м<sup>2</sup>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="images/slider-photo3.png" alt="Modern house 001">
+                <div class="slider-item-des ">
+                    <div class="sid-main">
+                        <div class="sid-name">
+                            Modern house 006
+                        </div>
+                        <div class="sid-address">
+                            Киевская обл., г. Борова, 15
+                        </div>
+                    </div>
+                    <div class="sid-param">
+                        <div class="sid-size">
+                            <span>Габариты:</span> 10,4 м Х 9,5 м
+                        </div>
+                        <div class="sid-square">
+                            <span>Площадь:</span> 162,8 м<sup>2</sup>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="images/slider-photo1.png" alt="Modern house 001">
+                <div class="slider-item-des">
+                    <div class="sid-main">
+                        <div class="sid-name">
+                            Modern house 005
+                        </div>
+                        <div class="sid-address">
+                            Киевская обл., г. Борова, 15
+                        </div>
+                    </div>
+                    <div class="sid-param">
+                        <div class="sid-size">
+                            <span>Габариты:</span> 8,4 м Х 10,5 м
+                        </div>
+                        <div class="sid-square">
+                            <span>Площадь:</span> 154 м<sup>2</sup>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="images/slider-photo2.png" alt="Modern house 001">
+                <div class="slider-item-des ">
+                    <div class="sid-main">
+                        <div class="sid-name">
+                            Modern house 001
+                        </div>
+                        <div class="sid-address">
+                            Киевская обл., г. Борова, 15
+                        </div>
+                    </div>
+                    <div class="sid-param">
+                        <div class="sid-size">
+                            <span>Габариты:</span> 8,4 м Х 10,5 м
+                        </div>
+                        <div class="sid-square">
+                            <span>Площадь:</span> 154 м<sup>2</sup>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="images/slider-photo5.png" alt="Modern house 001">
+                <div class="slider-item-des">
+                    <div class="sid-main">
+                        <div class="sid-name">
+                            Modern house 010
+                        </div>
+                        <div class="sid-address">
+                            Киевская обл., г. Бибибуп, 34
+                        </div>
+                    </div>
+                    <div class="sid-param">
+                        <div class="sid-size">
+                            <span>Габариты:</span> 15,4 м Х 10,5 м
+                        </div>
+                        <div class="sid-square">
+                            <span>Площадь:</span> 203 м<sup>2</sup>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="nextSlide" class="slider-arrow next">&#10095;</button>
+    </div>
+</section>
+
+<section class="guarantees">
+    <div class="container-self">
+        <div class="guarantees-title text-center">
+            Гарантии и условия оплаты
+        </div>
+        <div class="guarantees-blocks">
+            <div class="guarantees-block">
+                <div class="guarantees-icon">
+                    <img src="images/calendar-icon.png" alt="Calendar Icon">
+                </div>
+                <div class="guarantees-p">
+                    <div class="guarant-title">
+                        Гарантия сроков
+                    </div>
+                    <div class="guarantees-text">
+                        Юридическая гарантия сроков.
+                        До 0.1 % от суммы за каждый день просрочки
+                    </div>
+                </div>
+            </div>
+
+            <div class="guarantees-block">
+                <div class="guarantees-icon">
+                    <img src="images/insurance-icon.png" alt="Calendar Icon">
+                </div>
+                <div class="guarantees-p">
+                    <div class="guarant-title">
+                        Страховка
+                    </div>
+                    <div class="guarantees-text">
+                        Гарантия 10 лет. Страховка дома. Обработка дома. Сервисное обслуживание
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="advantages">
+            <div class="advantage">
+                <div class="adv-icon">
+                    <img src="images/writing-icon.png" alt="Writing Icon">
+                </div>
+                <div class="adv-title">
+                    Гарантия фиксированной сметы
+                </div>
+                <div class="adv-text">
+                    Все непредсказуемые расходы компенсируем за свой счет
+                </div>
+            </div>
+
+            <div class="advantage">
+                <div class="adv-icon">
+                    <img src="images/people-icon.png" alt="People Icon">
+                </div>
+                <div class="adv-title">
+                    Без посредников
+                </div>
+                <div class="adv-text">
+                    Мы сами выполняем все работы и несем за них ответственность
+                </div>
+            </div>
+
+            <div class="advantage">
+                <div class="adv-icon">
+                    <img src="images/coin-icon.png" alt="Coin Icon">
+                </div>
+                <div class="adv-title">
+                    Оплата по факту
+                </div>
+                <div class="adv-text">
+                    Оплата всех работ по факту их выполнения
+                </div>
+            </div>
+        </div>
+        <button class="pdf">Скачать PDF-пример договора (1,3 мб)</button>
+    </div>
+</section>
+
+<section class="consultation" id="consultation">
+    <div class="container-self">
+        <div class="consultation-img">
+            <img src="images/form-house.png" alt="House">
+        </div>
+        <div class="consultation-form">
+            <div class="cf-title text-center">
+                Получите индивидуальную
+                консультацию
+            </div>
+            <form class="needs-validation justify-content-center" novalidate>
+                <div class="form-input">
+                    <input type="text" class="form-control" id="userName" value="" required placeholder="Ваше имя">
+                    <div class="invalid-feedback">
+                        Необходимо ввести ваше имя
+                    </div>
+                </div>
+                <div class="form-input">
+                    <input type="text" class="form-control" id="userPhone" value="" required placeholder="Ваш телефон">
+                    <div class="invalid-feedback">
+                        Необходимо ввести ваш телефон
+                    </div>
+                </div>
+                <button class="btn-custom form-button" type="submit">
+                    Нужна консультация
+                </button>
+                <div class="agree d-flex">
+                    <input type="checkbox" id="politics" name="politics"/>
+                    <label for="politics">
+                        <div class="icon">
+                            <img src="images/tick-icon.png" alt="Tick">
+                        </div>
+                    </label>
+                    <div class="agreement">
+                        Нажимая на кнопку, я даю согласие на обработку персональных данных и соглашаюсь с <a
+                            href="#">политикой конфиденциальности</a>
+                    </div>
+                </div>
+                <div class="invalid-feedback" id="agree-data">
+                    Вы должны дать свое согласие на обработку данных
+                </div>
+            </form>
+        </div>
+        <div class="thanks text-center" id="good-thank">
+            Спасибо, мы свяжемся с вами в ближайшее время!
+        </div>
+    </div>
+</section>
+
+<section class="excursion">
+    <div class="container-self">
+        <div class="exc-main">
+            <div class="exc-title">
+                Запишитесь
+                на экскурсию
+            </div>
+            <div class="exc-text">
+                В готовые дома, чтобы лично убедиться в качестве нашей работы
+            </div>
+            <button type="button" class="btn-custom" data-bs-toggle="modal" data-bs-target="#exampleModal">Записаться
+            </button>
+        </div>
+    </div>
+</section>
+
+
+<!-- Modal -->
+<div class="consultation-popup modal fade" id="exampleModal" tabindex="-1"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <form class="needs-validation justify-content-center" id="popup" novalidate>
+                <div class="form-text">
+                    Пожалуйста, оставьте свои данные, чтобы мы могли связаться с вами и уточнить детали предстоящей
+                    экскурсии
+                </div>
+                <div class="form-input">
+                    <input type="text" class="form-control" id="userName-popup" value="" required
+                           placeholder="Ваше имя">
+                    <div class="invalid-feedback">
+                        Необходимо ввести ваше имя
+                    </div>
+                </div>
+                <div class="form-input">
+                    <input type="text" class="form-control" id="userPhone-popup" value="" required
+                           placeholder="Ваш телефон">
+                    <div class="invalid-feedback">
+                        Необходимо ввести ваш телефон
+                    </div>
+                </div>
+                <button class="btn-custom form-button" type="submit">
+                    Нужна консультация
+                </button>
+                <div class="agree d-flex">
+                    <input type="checkbox" id="politics-popup" name="politics-popup"/>
+                    <label for="politics-popup"></label>
+                    <div class="agreement">
+                        Нажимая на кнопку, я даю согласие на обработку персональных данных и соглашаюсь с <a
+                            href="#">политикой конфиденциальности</a>
+                    </div>
+                    <div class="icon-popup">
+                        <img src="images/tick-icon.png" alt="Tick">
+                    </div>
+                </div>
+                <div class="invalid-feedback" id="agree-data-popup">
+                    Вы должны дать свое согласие на обработку данных
+                </div>
+            </form>
+            <img class="cancel-icon" src="images/cancel-icon.png" alt="Cancel">
+            <div class="thanks text-center" id="good-thank-popup">
+                Спасибо, мы свяжемся с вами в ближайшее время!
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container-self">
+        <div class="info">
+            <div class="address">
+                г. Киев, бульвар Кольцова, 14-Ж
+            </div>
+            <div class="work-hours">
+                Пн-Пт: 10:00 - 19:00
+            </div>
+        </div>
+        <div class="main text-center">
+            <div class="logo-block">
+                <img class="logo" src="/images/House%20Care.png" alt="Logo">
+            </div>
+            <div class="media">
+                <svg class="media-icon" viewBox="0 0 30 30" role="img"
+                     xmlns="http://www.w3.org/2000/svg"><title>Instagram
+                    icon</title>
+                    <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                </svg>
+                <svg class="media-icon" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M5.78754 14.0196C5.83131 14.0344 5.87549 14.0448 5.91963 14.0512C5.96777 14.1644 6.02996 14.3107 6.10252 14.4818C6.27959 14.8994 6.51818 15.4643 6.76446 16.0535C7.2667 17.2552 7.77332 18.4939 7.88521 18.8485C8.02372 19.2868 8.17013 19.5848 8.32996 19.7883C8.4126 19.8935 8.50819 19.9853 8.62003 20.0549C8.67633 20.0899 8.7358 20.1186 8.79788 20.14C8.80062 20.141 8.80335 20.1419 8.80608 20.1428C9.1261 20.2636 9.41786 20.2133 9.60053 20.1518C9.69827 20.1188 9.77735 20.0791 9.8334 20.0469C9.86198 20.0304 9.88612 20.0151 9.90538 20.0021L9.90992 19.9991L12.7361 18.2366L16.0007 20.7394C16.0488 20.7763 16.1014 20.8073 16.157 20.8316C16.5492 21.0027 16.929 21.0624 17.2862 21.0136C17.6429 20.9649 17.926 20.8151 18.1368 20.6464C18.3432 20.4813 18.4832 20.2963 18.5703 20.1589C18.6148 20.0887 18.6482 20.0266 18.6718 19.9791C18.6836 19.9552 18.6931 19.9346 18.7005 19.9181L18.7099 19.8963L18.7135 19.8877L18.715 19.8841L18.7156 19.8824L18.7163 19.8808C18.7334 19.8379 18.7466 19.7935 18.7556 19.7482L21.7358 4.72274C21.7453 4.67469 21.7501 4.62581 21.7501 4.57682C21.7501 4.13681 21.5843 3.71841 21.1945 3.46452C20.8613 3.24752 20.4901 3.23818 20.2556 3.25598C20.0025 3.27519 19.7688 3.33766 19.612 3.38757C19.5304 3.41355 19.4619 3.43861 19.4126 3.45773C19.3878 3.46734 19.3675 3.47559 19.3523 3.48188L19.341 3.48666L2.62725 10.0432L2.62509 10.044C2.61444 10.0479 2.60076 10.053 2.58451 10.0593C2.55215 10.0719 2.50878 10.0896 2.45813 10.1126C2.35935 10.1574 2.22077 10.2273 2.07856 10.3247C1.85137 10.4803 1.32888 10.9064 1.41686 11.6097C1.48705 12.1708 1.87143 12.5154 2.10562 12.6811C2.23421 12.7721 2.35638 12.8371 2.44535 12.8795C2.48662 12.8991 2.57232 12.9339 2.6095 12.9491L2.61889 12.9529L5.78754 14.0196ZM19.9259 4.86786L19.9236 4.86888C19.9152 4.8725 19.9069 4.87596 19.8984 4.87928L3.1644 11.4438C3.15566 11.4472 3.14686 11.4505 3.138 11.4536L3.12869 11.4571C3.11798 11.4613 3.09996 11.4686 3.07734 11.4788C3.06451 11.4846 3.05112 11.491 3.03747 11.4978C3.05622 11.5084 3.07417 11.5175 3.09012 11.5251C3.10543 11.5324 3.11711 11.5374 3.1235 11.54L6.26613 12.598C6.32365 12.6174 6.37727 12.643 6.42649 12.674L16.8033 6.59948L16.813 6.59374C16.8205 6.58927 16.8305 6.58353 16.8424 6.5768C16.866 6.56345 16.8984 6.54568 16.937 6.52603C17.009 6.48938 17.1243 6.43497 17.2541 6.39485C17.3444 6.36692 17.6109 6.28823 17.899 6.38064C18.0768 6.43767 18.2609 6.56028 18.3807 6.76798C18.4401 6.87117 18.4718 6.97483 18.4872 7.06972C18.528 7.2192 18.5215 7.36681 18.4896 7.49424C18.4208 7.76875 18.228 7.98287 18.0525 8.14665C17.9021 8.28706 15.9567 10.1629 14.0376 12.0147C13.0805 12.9381 12.1333 13.8525 11.4252 14.5359L10.9602 14.9849L16.8321 19.4867C16.9668 19.5349 17.0464 19.5325 17.0832 19.5274C17.1271 19.5214 17.163 19.5045 17.1997 19.4752C17.2407 19.4424 17.2766 19.398 17.3034 19.3557L17.3045 19.354L20.195 4.78102C20.1521 4.79133 20.1087 4.80361 20.0669 4.81691C20.0196 4.83198 19.9805 4.84634 19.9547 4.85637C19.9418 4.86134 19.9326 4.86511 19.9276 4.86719L19.9259 4.86786ZM11.4646 17.2618L10.2931 16.3636L10.0093 18.1693L11.4646 17.2618ZM9.21846 14.5814L10.3834 13.4567C11.0915 12.7732 12.0389 11.8588 12.9961 10.9352L13.9686 9.997L7.44853 13.8138L7.48351 13.8963C7.66121 14.3154 7.90087 14.8827 8.14845 15.4751C8.33358 15.918 8.52717 16.3844 8.70349 16.8162L8.98653 15.0158C9.01381 14.8422 9.09861 14.692 9.21846 14.5814Z"
+                    />
+                </svg>
+                <svg class="media-icon yt"
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 30 30"
+                     height="40px"
+                     width="40px"
+                     fill="transparent"
+                     stroke="#ffffff"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                >
+                    <path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"/>
+                    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+                </svg>
+            </div>
+        </div>
+        <div class="phone">
+            <div class="phone-number mb-2">
+                +380 (96) 73-67-281
+            </div>
+            <div class="phone-block">
+                <img src="images/phone-call.png" alt="phoneCall">
+                <a href="#consultation" class="phone-block">
+                    <div class="phone-text d-inline-block">
+                        Заказать звонок
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="scripts/jquery-3.7.1.min.js"></script>
+<script src="slick/slick.min.js"></script>
+<script src="magnific-popup/jquery.magnific-popup.js"></script>
+<script src="scripts/wow.min.js"></script>
+<script src="scripts/script.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.image-link').magnificPopup({
+            type: 'image',
+            image: {
+                verticalFit: true,
+                titleSrc: function (item) {
+                    return item.el.attr('title');
+                }
+            },
+            callbacks: {
+                open: function () {
+                    // Дополнительные действия при открытии
+                },
+                close: function () {
+                    // Действия при закрытии
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>
